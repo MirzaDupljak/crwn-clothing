@@ -1,5 +1,6 @@
 const App = () => {
   return (
+    
     <div className='categories-container'>
       <div className='category-container'>
         {/* <img /> */}
@@ -8,6 +9,7 @@ const App = () => {
           <p>Shop Now</p>
         </div>
       </div>
+
       <div className='category-container'>
         {/* <img /> */}
         <div className='category-body-container'>
@@ -15,6 +17,7 @@ const App = () => {
           <p>Shop Now</p>
         </div>
       </div>
+
       <div className='category-container'>
         {/* <img /> */}
         <div className='category-body-container'>
@@ -22,6 +25,7 @@ const App = () => {
           <p>Shop Now</p>
         </div>
       </div>
+
       <div className='category-container'>
         {/* <img /> */}
         <div className='category-body-container'>
@@ -29,6 +33,7 @@ const App = () => {
           <p>Shop Now</p>
         </div>
       </div>
+
       <div className='category-container'>
         {/* <img /> */}
         <div className='category-body-container'>
@@ -36,6 +41,7 @@ const App = () => {
           <p>Shop Now</p>
         </div>
       </div>
+      
     </div>
   );
 };

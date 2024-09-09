@@ -1,3 +1,4 @@
+// biome-ignore lint/style/useImportType: <explanation>
 import { useState, FormEvent, ChangeEvent } from 'react';
 import { useDispatch } from 'react-redux';
 
@@ -74,7 +75,7 @@ const SignInForm = () => {
             type='button'
             onClick={signInWithGoogle}
           >
-            Sign In With Google
+            Google Sign In
           </Button>
         </ButtonsContainer>
       </form>

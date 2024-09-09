@@ -1,4 +1,5 @@
 import { initializeApp } from 'firebase/app';
+// biome-ignore lint/style/useImportType: <explanation>
 import {
   getAuth,
   signInWithRedirect,
@@ -11,6 +12,7 @@ import {
   NextOrObserver,
   User,
 } from 'firebase/auth';
+// biome-ignore lint/style/useImportType: <explanation>
 import {
   getFirestore,
   doc,
@@ -23,15 +25,16 @@ import {
   QueryDocumentSnapshot,
 } from 'firebase/firestore';
 
+// biome-ignore lint/style/useImportType: <explanation>
 import { Category } from '../../store/categories/category.types';
 
 const firebaseConfig = {
-  apiKey: 'AIzaSyDDU4V-_QV3M8GyhC9SVieRTDM4dbiT0Yk',
-  authDomain: 'crwn-clothing-db-98d4d.firebaseapp.com',
-  projectId: 'crwn-clothing-db-98d4d',
-  storageBucket: 'crwn-clothing-db-98d4d.appspot.com',
-  messagingSenderId: '626766232035',
-  appId: '1:626766232035:web:506621582dab103a4d08d6',
+  apiKey: "AIzaSyCMxT10MDmzSPBkr3Fa0CcgO7Y3j8W0kFE",
+  authDomain: "crwn-clothing-db-67026.firebaseapp.com",
+  projectId: "crwn-clothing-db-67026",
+  storageBucket: "crwn-clothing-db-67026.appspot.com",
+  messagingSenderId: "357664569297",
+  appId: "1:357664569297:web:7bb4cbc44ad49b8dd692f0",
 };
 
 const firebaseApp = initializeApp(firebaseConfig);
@@ -61,6 +64,7 @@ export const addCollectionAndDocuments = async <T extends ObjectToAdd>(
   const collectionRef = collection(db, collectionKey);
   const batch = writeBatch(db);
 
+  // biome-ignore lint/complexity/noForEach: <explanation>
   objectsToAdd.forEach((object) => {
     const docRef = doc(collectionRef, object.title.toLowerCase());
     batch.set(docRef, object);
@@ -93,6 +97,7 @@ export type UserData = {
 export const createUserDocumentFromAuth = async (
   userAuth: User,
   additionalInformation = {} as AdditionalInformation
+  // biome-ignore lint/suspicious/noConfusingVoidType: <explanation>
 ): Promise<void | QueryDocumentSnapshot<UserData>> => {
   if (!userAuth) return;
 

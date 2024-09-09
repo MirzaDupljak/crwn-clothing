@@ -1,3 +1,4 @@
+// biome-ignore lint/style/useImportType: <explanation>
 import { FC, memo } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 
@@ -18,6 +19,7 @@ import {
   RemoveButton,
 } from './checkout-item.styles';
 
+// biome-ignore lint/style/useImportType: <explanation>
 import { CartItem } from '../../store/cart/cart.types';
 
 type CheckoutItemProps = {

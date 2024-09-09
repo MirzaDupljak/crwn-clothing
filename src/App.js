@@ -21,6 +21,7 @@ const Authentication = lazy(() =>
 const App = () => {
   const dispatch = useDispatch();
 
+  // biome-ignore lint/correctness/useExhaustiveDependencies: <explanation>
   useEffect(() => {
     dispatch(checkUserSession());
   }, []);

@@ -17,7 +17,6 @@ const Home = lazy(() => import("./routes/home/home.component"));
 const Authentication = lazy(() =>
   import("./routes/authentication/authentication.component")
 );
-
 const App = () => {
   const dispatch = useDispatch();
 
